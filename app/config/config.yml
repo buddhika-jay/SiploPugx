@@ -83,47 +83,53 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Siplo\UserBundle\Entity\UserTwo
+    user_class: Siplo\UserBundle\Entity\User
     service:
         user_manager: pugx_user_manager
 
 pugx_multi_user:
   users:
-    user_one:
-        entity:
-          class: Siplo\UserBundle\Entity\UserOne
-#          factory:
-        registration:
-          form:
-            type: Siplo\UserBundle\Form\Type\UserOneType
-            #name: fos_user_registration_form
-            validation_groups:  [Registration, Default]
-          template: SiploUserBundle:Registration:registerUserOne.html.twig
-        profile:
-          form:
-            type: Siplo\UserBundle\Form\Type\ProfileUserOneFormType
-            name: fos_user_profile_form
-            validation_groups:  [Profile, Default]
-    user_two:
-        entity:
-          class: Siplo\UserBundle\Entity\UserTwo
-        registration:
-          form:
-            type: Siplo\UserBundle\Form\Type\UserTwoType #RegistrationForm2Type
-            validation_groups:  [Registration, Default]
-          template: SiploUserBundle:Registration:registerUserTwo.html.twig
-        profile:
-          form:
-            type: Siplo\UserBundle\Form\Type\ProfileUserTwoFormType
-
     student:
         entity:
           class: Siplo\UserBundle\Entity\Student
         registration:
           form:
-            type: Siplo\UserBundle\Form\StudentRegistrationFormType
+            type: Siplo\UserBundle\Form\Type\StudentRegistrationFormType
             validation_groups:  [Registration, Default]
-          template: SiploUserBundle:Registration:registerStudent.html.twig
+          template: SiploUserBundle:Registration:studentRegistration.html.twig
         profile:
           form:
             type: Siplo\UserBundle\Form\Type\ProfileUserTwoFormType
+    teacher:
+        entity:
+          class: Siplo\UserBundle\Entity\Teacher
+        registration:
+          form:
+            type: Siplo\UserBundle\Form\Type\TeacherRegistrationFormType
+            validation_groups:  [Registration, Default]
+          template: SiploUserBundle:Registration:teacherRegistration.html.twig
+        profile:
+          form:
+            type: Siplo\UserBundle\Form\Type\ProfileUserTwoFormType
+    guardian:
+            entity:
+              class: Siplo\UserBundle\Entity\Guardian
+            registration:
+              form:
+                type: Siplo\UserBundle\Form\Type\GuardianRegistrationFormType
+                validation_groups:  [Registration, Default]
+              template: SiploUserBundle:Registration:guardianRegistration.html.twig
+            profile:
+              form:
+                type: Siplo\UserBundle\Form\Type\ProfileUserTwoFormType
+    admin:
+            entity:
+              class: Siplo\UserBundle\Entity\Admin
+            registration:
+              form:
+                type: Siplo\UserBundle\Form\Type\AdminRegistrationFormType
+                validation_groups:  [Registration, Default]
+              template: SiploUserBundle:Registration:adminRegistration.html.twig
+            profile:
+              form:
+                type: Siplo\UserBundle\Form\Type\ProfileUserTwoFormType

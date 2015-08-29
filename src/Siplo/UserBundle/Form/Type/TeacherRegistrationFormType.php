@@ -1,12 +1,12 @@
 <?php
 
-namespace Siplo\UserBundle\Form;
+namespace Siplo\UserBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class StudentRegistrationFormType extends AbstractType
+class TeacherRegistrationFormType extends AbstractType
 {
 
     /**
@@ -15,7 +15,7 @@ class StudentRegistrationFormType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Siplo\UserBundle\Entity\Student'
+            'data_class' => 'Siplo\UserBundle\Entity\Teacher'
         ));
     }
 
@@ -24,7 +24,7 @@ class StudentRegistrationFormType extends AbstractType
      */
     public function getName()
     {
-        return 'siplo_student_registration';
+        return 'siplo_teacher_registration';
     }
 
     public function getParent()

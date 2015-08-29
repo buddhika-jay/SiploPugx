@@ -6,13 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class RegistrationUserTwoController extends Controller
+class AdminRegistrationController extends Controller
 {
     public function registerAction()
     {
         return $this->container
             ->get('pugx_multi_user.registration_manager')
-            ->register('Siplo\UserBundle\Entity\UserTwo');
+            ->register('Siplo\UserBundle\Entity\Admin');
     }
-
 }

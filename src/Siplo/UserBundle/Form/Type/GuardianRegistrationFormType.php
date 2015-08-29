@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class UserOneType extends AbstractType
+class GuardianRegistrationFormType extends AbstractType
 {
 
     /**
@@ -15,7 +15,7 @@ class UserOneType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Siplo\UserBundle\Entity\UserOne'
+            'data_class' => 'Siplo\UserBundle\Entity\Guardian'
         ));
     }
 
@@ -24,7 +24,7 @@ class UserOneType extends AbstractType
      */
     public function getName()
     {
-        return 'siplo_user_one_registration';
+        return 'siplo_guardian_registration';
     }
 
     public function getParent()
