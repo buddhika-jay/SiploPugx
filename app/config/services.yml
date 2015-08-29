@@ -1,0 +1,18 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    siplo_user.form.type.user_one:
+        class: Siplo\UserBundle\Entity\UserOne
+        tags:
+            - { name: form.type, alias: siplo_user_one_registration }
+    siplo_user.form.type.user_two:
+            class: Siplo\UserBundle\Entity\UserTwo
+            tags:
+                - { name: form.type, alias: siplo_user_two_registration }

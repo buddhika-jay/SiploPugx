@@ -1,0 +1,22 @@
+#siplo_user:
+#    resource: "@SiploUserBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+user_one_registration:
+    pattern:  /register/user-one
+    defaults: { _controller: SiploUserBundle:RegistrationUserOne:register }
+
+user_two_registration:
+    pattern:  /register/user-two
+    defaults: { _controller: SiploUserBundle:RegistrationUserTwo:register }
+
+student_registration:
+    pattern:  /register/student
+    defaults: { _controller: SiploUserBundle:RegistrationStudent:register }
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
