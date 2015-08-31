@@ -23,6 +23,7 @@ class AppKernel extends Kernel
 //            Calendar
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
+            new Siplo\CalendarBundle\SiploCalendarBundle(),
 
         );
 

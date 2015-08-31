@@ -7,6 +7,10 @@ siplo_user:
     resource: "@SiploUserBundle/Controller/"
     type:     annotation
     prefix:   /
+siplo_calendar:
+    resource: "@SiploCalendarBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
