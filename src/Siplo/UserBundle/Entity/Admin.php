@@ -8,6 +8,7 @@ use PUGX\MultiUserBundle\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity
  * @ORM\Table(name="admin")
+ * @ORM\HasLifecycleCallbacks()
  * @UniqueEntity(fields = "username", targetClass = "Siplo\UserBundle\Entity\User", message="fos_user.username.already_used")
  * @UniqueEntity(fields = "email", targetClass = "Siplo\UserBundle\Entity\User", message="fos_user.email.already_used")
  */
@@ -31,5 +32,15 @@ class Admin extends User
     public function getId()
     {
         return $this->id;
+    }
+
+    //Doctrine Lifecycle callbacks
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        $this->addRole('ROLE_ADMIN');
+//        $this->addGroup('admins');
     }
 }

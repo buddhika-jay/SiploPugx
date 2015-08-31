@@ -30,3 +30,26 @@ admin_registration:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+#home
+siplo_home:
+    pattern: /home
+    defaults: { _controller: SiploUserBundle:Default:home }
+
+# Login
+
+siplo_student_home:
+    pattern: /student/home
+    defaults: {_controller: SiploUserBundle:Home:studentHome}
+
+siplo_teacher_home:
+    pattern: /teacher/home
+    defaults: {_controller: SiploUserBundle:Home:teacherHome}
+
+siplo_guardian_home:
+    pattern: /guardian/home
+    defaults: {_controller: SiploUserBundle:Home:guardianHome}
+
+siplo_admin_home:
+    pattern: /admin/home
+    defaults: {_controller: SiploUserBundle:Home:adminHome}

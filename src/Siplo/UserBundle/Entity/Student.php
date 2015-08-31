@@ -8,6 +8,7 @@ use PUGX\MultiUserBundle\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity
  * @ORM\Table(name="student")
+ * @ORM\HasLifecycleCallbacks()
  * @UniqueEntity(fields = "username", targetClass = "Siplo\UserBundle\Entity\User", message="fos_user.username.already_used")
  * @UniqueEntity(fields = "email", targetClass = "Siplo\UserBundle\Entity\User", message="fos_user.email.already_used")
  */
@@ -32,4 +33,16 @@ class Student extends User
     {
         return $this->id;
     }
+
+
+    //Doctrine Lifecycle callbacks
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        $this->addRole('ROLE_STUDENT');
+//        $this->addGroup('students');
+    }
+
 }
