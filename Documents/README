@@ -4,7 +4,20 @@ Create an Entity
     Add entity to parent entity
 Create a from from entity
 Create twig
-Update config.yl
+Update config.yml
 
 Create Controller
 update routing.yml
+
+***********************************************************************
+Assigning Roles
+
+Roles are assigned using Doctine Lifecyle Callbacks
+**********************************************************************
+
+
+Redirecting based on ROLE
+    http://www.reecefowell.com/2011/10/26/redirecting-on-loginlogout-in-symfony2-using-loginhandlers/
+    http://stackoverflow.com/questions/15908856/do-something-just-after-symfony2-login-success-and-before-redirect
+Assigning Groups
+    http://stackoverflow.com/questions/19321146/how-to-assign-roles-on-successful-registration
