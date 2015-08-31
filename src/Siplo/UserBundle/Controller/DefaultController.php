@@ -14,6 +14,20 @@ class DefaultController extends Controller
      */
     public function indexAction($name)
     {
-        return array('name' => $name);
+        return $this->render(
+            'SiploUserBundle:Home:home.html.twig',
+            array('name' => $name)
+        );
+    }
+
+    /**
+     * @Route("/home")
+     * @Template()
+     */
+    public function homeAction()
+    {
+        return $this->render(
+            'SiploUserBundle:Home:home.html.twig'
+        );
     }
 }

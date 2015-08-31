@@ -1,12 +1,12 @@
-siplo_lms:
-    resource: "@SiploLMSBundle/Controller/DefaultController.php"
-    type:     annotation
-    prefix:   /
-
-#siplo_user:
-#    resource: "@SiploUserBundle/Controller/"
+#siplo_lms:
+#    resource: "@SiploLMSBundle/Controller/DefaultController.php"
 #    type:     annotation
 #    prefix:   /
+
+siplo_user:
+    resource: "@SiploUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 app:
     resource: "@AppBundle/Controller/"
@@ -14,19 +14,19 @@ app:
 
 student_registration:
     pattern:  /register/student
-    defaults: { _controller: SiploUserBundle:StudentRegistration:register }
+    defaults: { _controller: SiploUserBundle:Registration:registerStudent }
 
 teacher_registration:
     pattern:  /register/teacher
-    defaults: { _controller: SiploUserBundle:TeacherRegistration:register }
+    defaults: { _controller: SiploUserBundle:Registration:registerTeacher }
 
 guardian_registration:
     pattern:  /register/guardian
-    defaults: { _controller: SiploUserBundle:GuardianRegistration:register }
+    defaults: { _controller: SiploUserBundle:Registration:registerGuardian }
 
 admin_registration:
     pattern:  /register/admin
-    defaults: { _controller: SiploUserBundle:AdminRegistration:register }
+    defaults: { _controller: SiploUserBundle:Registration:registerAdmin }
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

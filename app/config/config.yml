@@ -40,7 +40,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ SiploLMSBundle]
+    bundles:        [ SiploUserBundle]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
