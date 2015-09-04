@@ -27,6 +27,7 @@ class AppKernel extends Kernel
 
 //            Admin Bundle
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
 
         );
 
