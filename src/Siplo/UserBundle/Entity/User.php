@@ -4,7 +4,7 @@ namespace Siplo\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-use FOS\UserBundle\Model\User as BaseUser;
+use Siplo\UserBundle\Model\UserModel as BaseUSer;
 
 /**
  * @ORM\Entity
