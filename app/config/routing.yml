@@ -18,6 +18,11 @@ fos_js_routing:
 adesigns_calendar:
     resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
 
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /siplo/admin
+
 
 app:
     resource: "@AppBundle/Controller/"
@@ -61,6 +66,7 @@ siplo_guardian_home:
     pattern: /guardian/home
     defaults: {_controller: SiploUserBundle:Home:guardianHome}
 
-siplo_admin_home:
-    pattern: /admin/home
-    defaults: {_controller: SiploUserBundle:Home:adminHome}
+#siplo_admin_home:
+#    pattern: /admin/home
+#    defaults: {_controller: SiploUserBundle:Home:adminHome}
+

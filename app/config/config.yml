@@ -133,3 +133,20 @@ pugx_multi_user:
             profile:
               form:
                 type: Siplo\UserBundle\Form\Type\ProfileUserTwoFormType
+
+#Admin Bundle
+
+easy_admin:
+    entities:
+        - Siplo\UserBundle\Entity\Student
+        - Siplo\UserBundle\Entity\Teacher
+        - Siplo\UserBundle\Entity\Guardian
+
+#easy_admin:
+#    entities:
+#        Customer:
+#            class: Siplo\UserBundle\Entity\Student
+#        Order:
+#            class: Siplo\UserBundle\Entity\Teacher
+#        Product:
+#            class: Siplo\UserBundle\Entity\Guardian

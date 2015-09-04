@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends '@SiploUser/layout.html.twig' %}
 {% block body %}
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -8,7 +8,7 @@
                     <a class="navbar-brand" href="#" style="margin-top: -12px">
                         {% image '@SiploUserBundle/Resources/public/images/Logo03_mini_small.jpg' %}
                             <img src="{{ asset_url }}" alt="Example" class="img-responsive"/>
-                        {% endimage %}/>
+                        {% endimage %}
                     </a>
                 </div>
                 <div>
@@ -144,30 +144,35 @@
 
                     <!--login form start-->
                     <div class="col-md-4">
-                        <form class="form-horizontal">
-                            <h6>Enter login details</h6>
+                        {#Form#}
+                        {% block login_form %}
+                            <form class="form-horizontal">
+                                <h6>Enter login details</h6>
 
-                            <div class="form-group" style="margin-top: 0px">
-                                <div class="col-sm-12">
-                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="form-group" style="margin-top: -10px">
-                                <div class="col-sm-12">
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-6">
-                                    <div class="checkbox">
-                                        <label><input type="checkbox"/> Remember me</label>
+                                <div class="form-group" style="margin-top: 0px">
+                                    <div class="col-sm-12">
+                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
                                     </div>
                                 </div>
-                                <div class="text-right" style="margin-right: 15px">
-                                    <button type="submit" class="btn btn-success">Sign in</button>
+                                <div class="form-group" style="margin-top: -10px">
+                                    <div class="col-sm-12">
+                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox"/> Remember me</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-right" style="margin-right: 15px">
+                                        <button type="submit" class="btn btn-success">Sign in</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        {% endblock login_form %}
+                        {#End form#}
                         <div style="margin-top: 30px">
                             <h5>Don't have an account? <a style="cursor: pointer">Sign up here.</a></h5>
                         </div>

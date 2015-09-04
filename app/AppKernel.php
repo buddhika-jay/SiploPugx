@@ -25,6 +25,9 @@ class AppKernel extends Kernel
             new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
             new Siplo\CalendarBundle\SiploCalendarBundle(),
 
+//            Admin Bundle
+            new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

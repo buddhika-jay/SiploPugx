@@ -1,4 +1,4 @@
-Creating a user
+Steps for Creating a User
 
 Create an Entity
     Add entity to parent entity
@@ -9,11 +9,11 @@ Update config.yml
 Create Controller
 update routing.yml
 
-***********************************************************************
+************************************************************************************************************************
 Assigning Roles
 
 Roles are assigned using Doctine Lifecyle Callbacks
-**********************************************************************
+************************************************************************************************************************
 
 
 Redirecting based on ROLE
@@ -22,11 +22,19 @@ Redirecting based on ROLE
     http://stackoverflow.com/questions/15694593/login-redirect-service-handle-error-on-constructor-parameters
 Assigning Groups
     http://stackoverflow.com/questions/19321146/how-to-assign-roles-on-successful-registration
-******************************************************************************
+************************************************************************************************************************
 Configuring Calendar
 
-*******************************************************************************************************
+************************************************************************************************************************
 White Board
 
 WebRTC
 WebSockets
+************************************************************************************************************************
+Admin Bundle
+
+https://github.com/javiereguiluz/EasyAdminBundle
+************************************************************************************************************************
+Themes
+https://shapebootstrap.net/item/1524915-adminlte-dashboard-and-control-panel
+https://github.com/avanzu/AdminThemeBundle
