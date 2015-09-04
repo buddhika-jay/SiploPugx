@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
             new Avanzu\AdminThemeBundle\AvanzuAdminThemeBundle(),
 
+            new Siplo\ThemeBundle\SiploThemeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
