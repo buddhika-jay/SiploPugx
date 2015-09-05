@@ -28,7 +28,7 @@ class DefaultController extends Controller
      */
     public function viewCalendarAction()
     {
-        return $this->render('@SiploCalendar/testTheme.html.twig');
+        return $this->render('@SiploCalendar/calendarPage.html.twig');
 
     }
     /**
