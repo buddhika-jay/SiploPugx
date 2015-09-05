@@ -17,10 +17,10 @@
 
          </service>
              <!-- .load user to admin theme.. -->
-             <service id="siplo_user_bundle.show_user_listener" class="%siplo_user_bundle.show_user_listener.class%">
-                 <tag name="kernel.event_listener" event="theme.navbar_user" method="onShowUser" />
+         <service id="siplo_user_bundle.show_user_listener" class="%siplo_user_bundle.show_user_listener.class%">
+              <tag name="kernel.event_listener" event="theme.navbar_user" method="onShowUser" />
 
-             </service>
+         </service>
 
              <!-- ... -->
      </services>

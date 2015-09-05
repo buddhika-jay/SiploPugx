@@ -11,7 +11,7 @@
 parameters:
     siplo_user_security.login_success_handler.class: Siplo\UserBundle\Services\LoginSuccessHandler
 #    ccdn_user_security.component.authentication.handler.logout_success_handler.class: CCDNUser\SecurityBundle\Component\Authentication\Handler\LogoutSuccessHandler
-
+    siplo_user_bundle.show_user_listener.class: Siplo\UserBundle\EventListener\showUserListener
 services:
     siplo_login_success_handler:
         class:  Siplo\UserBundle\Services\LoginSuccessHandler
@@ -19,9 +19,18 @@ services:
         tags:
             - { name: 'monolog.logger', channel: 'security' }
 
-
+    siplo_user_bundle.show_user_listener:
+        class: %siplo_user_bundle.show_user_listener.class%
+        tags:
+            - { name: kernel.event_listener, event: theme.navbar_user, method: onShowUser}
 #    ccdn_user_security.component.authentication.handler.logout_success_handler:
 #        class:  %ccdn_user_security.component.authentication.handler.logout_success_handler.class%
 #        arguments:  [@service_container, @router]
 #        tags:
 #            - { name: 'monolog.logger', channel: 'security' }
+#         </service>
+#             <!-- .load user to admin theme.. -->
+#         <service id="siplo_user_bundle.show_user_listener" class="%siplo_user_bundle.show_user_listener.class%">
+#              <tag name="kernel.event_listener" event="theme.navbar_user" method="onShowUser" />
+#
+#         </service>

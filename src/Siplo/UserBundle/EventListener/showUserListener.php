@@ -6,12 +6,13 @@
  * Time: 11:08 AM
  */
 
-namespace MyAdminBundle\EventListener;
+namespace Siplo\UserBundle\EventListener;
 
 // ...
 
 use Avanzu\AdminThemeBundle\Event\ShowUserEvent;
-use Siplo\UserBundle\Model\UserModel;
+//use Siplo\UserBundle\Model\UserModel;
+use Avanzu\AdminThemeBundle\Model\UserModel;
 
 class showUserListener {
 
@@ -21,15 +22,14 @@ class showUserListener {
 
         $user = $this->getUser();
         $event->setUser($user);
-
     }
 
     protected function getUser() {
 
         // retrieve your concrete user model or entity
-       // $user = new UserModel();
-       // $user->setAvatar('')->setIsOnline(true)->setMemberSince(new \DateTime())->setUsername('Siplo User');
-        $user=$this->container->get('security.context')->getToken()->getUser;
+       $user = new UserModel();
+        $user->setAvatar('')->setIsOnline(true)->setMemberSince(new \DateTime())->setUsername('Siplo User');
+      //  $user=$this->container->get('security.context')->getToken()->getUser;
         return $user;
     }
 

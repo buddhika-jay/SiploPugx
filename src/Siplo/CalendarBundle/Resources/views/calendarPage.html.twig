@@ -7,18 +7,18 @@
          {{ render(controller('AvanzuAdminThemeBundle:Navbar:user')) }}
  {% endblock %}
 
- {% block avanzu_sidebar %}
-     {#{% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}#}
-         {{ render(controller('AvanzuAdminThemeBundle:Sidebar:userPanel')) }}
-         {{ render(controller('AvanzuAdminThemeBundle:Sidebar:searchForm')) }}
-     {#{% endif %}#}
-     {#{{ render(controller('AvanzuAdminThemeBundle:Sidebar:menu', {'request':app.request})) }}#}
+ {#{% block avanzu_sidebar %}#}
+     {#&#123;&#35;{% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}&#35;&#125;#}
+         {#{{ render(controller('AvanzuAdminThemeBundle:Sidebar:userPanel')) }}#}
+         {#{{ render(controller('AvanzuAdminThemeBundle:Sidebar:searchForm')) }}#}
+     {#&#123;&#35;{% endif %}&#35;&#125;#}
+     {#&#123;&#35;{{ render(controller('AvanzuAdminThemeBundle:Sidebar:menu', {'request':app.request})) }}&#35;&#125;#}
 
-     <a href="#">
-        <i class="fa fa-calendar"></i> <span>Calendar</span>
-         {#<small class="label pull-right bg-red">3</small>#}
-     </a>
- {% endblock %}
+     {#&#123;&#35;<a href="#">&#35;&#125;#}
+        {#&#123;&#35;<i class="fa fa-calendar"></i> <span>Calendar</span>&#35;&#125;#}
+         {#&#123;&#35;&#123;&#35;<small class="label pull-right bg-red">3</small>&#35;&#125;&#35;&#125;#}
+     {#&#123;&#35;</a>&#35;&#125;#}
+ {#{% endblock %}#}
 
 
 
