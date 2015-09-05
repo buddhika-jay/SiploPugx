@@ -4,13 +4,28 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
+    <parameters>
+        <!-- ... -->
+        <parameter key="siplo_user_bundle.show_user_listener.class">UserBundle\EventListener\showUserListener</parameter>
+        <!-- ... -->
+    </parameters>
 
      <services>
          <service id="siplo_user.registration.form.type" class="Siplo\UserBundle\Form\Type\UserTwoType">
              <tag name="form.type" alias="siplo_userbundle_usertwo" />
              <argument>%fos_user.model.user.class%</argument>
+
          </service>
+             <!-- .load user to admin theme.. -->
+             <service id="siplo_user_bundle.show_user_listener" class="%siplo_user_bundle.show_user_listener.class%">
+                 <tag name="kernel.event_listener" event="theme.navbar_user" method="onShowUser" />
+
+             </service>
+
+             <!-- ... -->
      </services>
+
+
     <!--
     <services>
         <service id="siplo_user.example" class="Siplo\UserBundle\Example">
