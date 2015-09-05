@@ -48,7 +48,7 @@ class DefaultController extends Controller
         $em->persist($event);
         $em->flush();
 
-        return  $this->render('@SiploCalendar/viewercalendar.html.twig');
+        return  $this->render('@SiploCalendar/calendarPage.html.twig');
     }
 
 
