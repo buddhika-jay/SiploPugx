@@ -28,9 +28,16 @@ $(function () {
                 data: {
                 },
                 error: function() {
-                   //alert('There was an error while fetching Google Calendar!');
+                   //alert('There was an error while fetching Calendar!');
                 }
             }
-        ]
+        ],
+        firstDay:1,
+        dayClick: function(date, jsEvent, view, resourceObj) {
+
+            alert('Add new class ' + date.format() + '(Not implemented)');
+            //alert('Resource ID: ' + resourceObj.id);
+
+        }
     });
 });

@@ -28,7 +28,7 @@ class DefaultController extends Controller
      */
     public function viewCalendarAction()
     {
-        return $this->render('@SiploCalendar/viewercalendar.html.twig');
+        return $this->render('@SiploCalendar/calendarPage.html.twig');
 
     }
     /**
@@ -40,7 +40,7 @@ class DefaultController extends Controller
        // $event->setTitle('test');
         $event->setBgColor('#'.$color);
         $event->setCssClass('test');
-        $event->setFgColor('test');
+        $event->setFgColor('t');
         $event->setUrl('test');
 
         $em = $this->getDoctrine()->getManager();
@@ -48,7 +48,7 @@ class DefaultController extends Controller
         $em->persist($event);
         $em->flush();
 
-        return  $this->render('@SiploCalendar/viewercalendar.html.twig');
+        return  $this->render('@SiploCalendar/calendarPage.html.twig');
     }
 
 

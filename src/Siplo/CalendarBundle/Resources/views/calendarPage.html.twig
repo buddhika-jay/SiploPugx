@@ -1,0 +1,39 @@
+{% extends '@SiploThemeBundle/Resources/views/layout/base-layout.html.twig' %}
+
+ {% block avanzu_navbar %}
+         {{ render(controller('AvanzuAdminThemeBundle:Navbar:messages')) }}
+         {{ render(controller('AvanzuAdminThemeBundle:Navbar:notifications')) }}
+         {{ render(controller('AvanzuAdminThemeBundle:Navbar:tasks')) }}
+         {{ render(controller('AvanzuAdminThemeBundle:Navbar:user')) }}
+ {% endblock %}
+
+ {% block avanzu_sidebar %}
+     {#{% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}#}
+         {{ render(controller('AvanzuAdminThemeBundle:Sidebar:userPanel')) }}
+         {{ render(controller('AvanzuAdminThemeBundle:Sidebar:searchForm')) }}
+     {#{% endif %}#}
+     {#{{ render(controller('AvanzuAdminThemeBundle:Sidebar:menu', {'request':app.request})) }}#}
+
+     <a href="#">
+        <i class="fa fa-calendar"></i> <span>Calendar</span>
+         {#<small class="label pull-right bg-red">3</small>#}
+     </a>
+ {% endblock %}
+
+
+
+ {% block page_title %}Calendar{% endblock %}
+ {% block page_subtitle %}{% endblock %}
+
+ {% block page_content %}
+ {% include '@SiploCalendar/viewercalendar.html.twig' %}
+ {% endblock %}
+
+ {% block avanzu_admin_footer %}
+      <footer class="main-footer">
+          <div class="pull-right hidden-xs">
+              <b>Version</b> 1.0
+          </div>
+          <strong>Copyright &copy; 2015 </strong> All rights reserved.
+      </footer>
+ {% endblock %}
