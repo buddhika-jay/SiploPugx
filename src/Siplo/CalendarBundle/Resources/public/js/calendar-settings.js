@@ -35,7 +35,7 @@ $(function () {
         firstDay:1,
         dayClick: function(date, jsEvent, view, resourceObj) {
 
-            alert('Add new class ' + date.format());
+            alert('Add new class ' + date.format() + '(Not implemented)');
             //alert('Resource ID: ' + resourceObj.id);
 
         }
