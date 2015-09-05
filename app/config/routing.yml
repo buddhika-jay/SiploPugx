@@ -1,10 +1,12 @@
-siplo_theme:
-    resource: "@SiploThemeBundle/Controller/"
-    type:     annotation
-    prefix:   /
+#avanzu_admin:
+#    resource: "@AvanzuAdminThemeBundle/Resources/config/routes.yml"
+avanzu_admin_profile:
+    path: /profile/{userid}/
+avanzu_admin_logout:
+    path: /logout
 
-#siplo_lms:
-#    resource: "@SiploLMSBundle/Controller/DefaultController.php"
+#siplo_theme:
+#    resource: "@SiploThemeBundle/Controller/"
 #    type:     annotation
 #    prefix:   /
 
@@ -35,19 +37,19 @@ app:
 
 student_registration:
     pattern:  /register/student
-    defaults: { _controller: SiploUserBundle:Registration:registerStudent }
+    defaults: { _controller: SiploUserBundle:SiploRegistration:registerStudent }
 
 teacher_registration:
     pattern:  /register/teacher
-    defaults: { _controller: SiploUserBundle:Registration:registerTeacher }
+    defaults: { _controller: SiploUserBundle:SiploRegistration:registerTeacher }
 
 guardian_registration:
     pattern:  /register/guardian
-    defaults: { _controller: SiploUserBundle:Registration:registerGuardian }
+    defaults: { _controller: SiploUserBundle:SiploRegistration:registerGuardian }
 
 admin_registration:
     pattern:  /register/admin
-    defaults: { _controller: SiploUserBundle:Registration:registerAdmin }
+    defaults: { _controller: SiploUserBundle:SiploRegistration:registerAdmin }
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
